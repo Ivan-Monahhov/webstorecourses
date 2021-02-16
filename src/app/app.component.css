@@ -31,3 +31,8 @@ h1,h3{
     background-color: blueviolet;
     height: 30px;
 }
+
+.cart-button img {
+    width: 30px;
+    height: 20px;
+}
