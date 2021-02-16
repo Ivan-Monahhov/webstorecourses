@@ -35,4 +35,5 @@ h1,h3{
 .cart-button img {
     width: 30px;
     height: 20px;
+    cursor: pointer;
 }
