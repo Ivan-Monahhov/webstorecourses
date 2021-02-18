@@ -25,6 +25,7 @@ h1,h3{
     width: 200px;
     display: flex;
     justify-content: space-between;
+    cursor: pointer;
 }
 
 .navbar .cart-button{
@@ -35,5 +36,4 @@ h1,h3{
 .cart-button img {
     width: 30px;
     height: 20px;
-    cursor: pointer;
 }
