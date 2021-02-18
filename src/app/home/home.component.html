@@ -1,0 +1,16 @@
+<p>home works!</p>
+{{variable}}
+<br>
+{{variable2}}
+<br>
+{{variable + variable2}}
+<br>
+{{testString()}}
+
+<div *ngFor="let item of itemList">
+  <img src={{item.imgSrc}} alt="">
+  <p>{{item.title}}</p>
+  <p>{{item.category}}</p>
+  <p>{{item.price}}</p>
+  <div (click)="addToCart(item)"><img src="\assets\shopping-cart.svg" height="20px" width="20px">Add to cart</div>
+</div>
