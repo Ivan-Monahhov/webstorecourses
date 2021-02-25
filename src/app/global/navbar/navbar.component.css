@@ -1,0 +1,23 @@
+.navbar img{
+  height: 100px;
+  width: 200px;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.navbar .cart-button{
+  background-color: blueviolet;
+  height: 30px;
+}
+
+.cart-button img {
+  width: 30px;
+  height: 20px;
+}
+
+.navbar{
+  background-color: blueviolet;
+  height: 100px;
+  box-shadow: 10px 10px 10px black;
+}
