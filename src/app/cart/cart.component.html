@@ -1,4 +1,18 @@
-<p>cart works!</p>
-<div *ngFor="let item of items">
-  <div>{{item.title}}</div>
+<div  *ngIf="items.length != 0">
+  <div *ngFor="let item of items; let i = index">
+    <div>{{item.title}}</div>
+    <div (click)="onDeleteFromCart(i, item)">X</div>
+  </div>
+  <div (click)="onDeleteAllItems()">Purge</div>
+  <div>Total {{cartValue.toFixed(2)}}</div>
+  <div>Total {{cartValue}}</div>
+  <div>Total {{cartValue.toPrecision(4)}}</div>
+  <div>Total {{cartValue.toExponential(2)}}</div>
 </div>
+<div class="cart-empty" *ngIf="items.length == 0">
+  <div>You no buy something</div>
+  <img src="assets/cartsad.png" alt="" >
+</div>
+
+
+

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {CartService} from "../cart/cart.service";
+import {Item} from "../models/item.model";
 
 @Component({
   selector: 'app-home',
@@ -18,9 +19,10 @@ export class HomeComponent implements OnInit {
   testString(): string{
     return "Go away";
   }
-  addToCart(item:{title:string,price:number,category:string,imgSrc:string}):void{
+  addToCart(item:Item):void{
     console.log(item);
     this.cartService.cart.push(item);
+    this.cartService.value += item.price
   }
 
 }

@@ -8,6 +8,7 @@
 {{testString()}}
 
 <div *ngFor="let item of itemList">
+  {{item | json}}
   <img src={{item.imgSrc}} alt="">
   <p>{{item.title}}</p>
   <p>{{item.category}}</p>

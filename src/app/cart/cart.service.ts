@@ -1,11 +1,13 @@
 import { Injectable } from '@angular/core';
+import {Item} from "../models/item.model";
 
 @Injectable({
   providedIn: 'root'
 })
 export class CartService {
 
-  cart:{title:string,price:number,category:string,imgSrc:string}[] = [];
+  cart:Item[] = [];
+  value:number = 0
   constructor() { }
 
   added(){}
