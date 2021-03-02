@@ -26,11 +26,14 @@ export class CartComponent implements OnInit {
     this.cartService.value -= item.price
     this.cartValue = this.cartService.value
     //this.cartService.cart.splice(index,1)
+
+    this.cartService.cartChanged.next(this.cartService.cart)
   }
   onDeleteAllItems(){
     //this.cartService.cart = []; do not assign new array as it when private you get passed a copy
     this.cartService.cart.splice(0,this.cartService.cart.length)
     this.cartService.value = 0
+    this.cartService.cartChanged.next(this.cartService.cart)
   }
 
 }

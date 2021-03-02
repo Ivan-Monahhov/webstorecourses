@@ -1,13 +1,19 @@
 <div  *ngIf="items.length != 0">
-  <div *ngFor="let item of items; let i = index">
+  <div *ngFor="let item of items; let i = index; let first1 = first; let last1 = last;">
+
     <div>{{item.title}}</div>
     <div (click)="onDeleteFromCart(i, item)">X</div>
+
+    <div>{{first1}}</div>
+
+    <div>{{last1}}</div>
   </div>
   <div (click)="onDeleteAllItems()">Purge</div>
   <div>Total {{cartValue.toFixed(2)}}</div>
   <div>Total {{cartValue}}</div>
   <div>Total {{cartValue.toPrecision(4)}}</div>
   <div>Total {{cartValue.toExponential(2)}}</div>
+
 </div>
 <div class="cart-empty" *ngIf="items.length == 0">
   <div>You no buy something</div>
