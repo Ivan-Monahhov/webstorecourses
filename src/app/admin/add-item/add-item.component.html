@@ -1,0 +1,11 @@
+<form ngForm="addItemForm" (ngSubmit)="onSubmit(addItemForm)">
+  <label for="title">Title</label><br>
+  <input type="text" id = title placeholder="Enter product name" ngModel name="title"><br>
+  <label for="price">Price</label><br>
+  <input type="number" id = price placeholder="Enter product price" ngModel name="price"><br>
+  <label for="picture">Picture</label><br>
+  <input type="text" id = picture placeholder="Enter product pic" ngModel name="picture"><br>
+  <label for="category">Category</label><br>
+  <input type="text" id = category placeholder="Category" ngModel name="category"><br>
+  <button >Add</button>
+</form>
