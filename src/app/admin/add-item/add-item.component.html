@@ -1,11 +1,13 @@
+<div routerLink="/admin">Back</div>
+
 <form #addItemForm = "ngForm" (ngSubmit)="onSubmit(addItemForm)">
-  <label for="title">Title</label><br>
-  <input type="text" id = title placeholder="Enter product name" ngModel name="title"><br>
+  <span for="title">Title</span><br>
+  <input type="text" id = title placeholder="Enter product name" ngModel name="title" required><br>
   <label for="price">Price</label><br>
-  <input type="number" id = price placeholder="Enter product price" ngModel name="price"><br>
+  <input type="number" id = price placeholder="Enter product price" ngModel name="price" required><br>
   <label for="picture">Picture</label><br>
   <input type="text" id = picture placeholder="Enter product pic" ngModel name="picture"><br>
   <label for="category">Category</label><br>
-  <input type="text" id = category placeholder="Category" ngModel name="category"><br>
-  <button >Add</button>
+  <input type="text" id = category placeholder="Category" ngModel name="category" required><br>
+  <button type="submit" [disabled] = 'addItemForm.invalid'>Add</button>
 </form>

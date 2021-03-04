@@ -1,0 +1,12 @@
+input.ng-invalid.ng-touched{
+  //background: red;
+  border: 1px solid red;
+}
+input.ng-valid.ng-pristine.ng-untouched{
+  border: 1px solid lightgreen;
+  //background: green;
+}
+input.ng-valid.ng-touched{
+  border: 1px solid green;
+//background: green;
+}

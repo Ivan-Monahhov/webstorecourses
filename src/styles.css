@@ -11,3 +11,8 @@ body{
 *{
   outline: none;
 }
+
+input.ng-invalid.ng-touched{
+//background: red;
+  border: 1px solid red;
+}
