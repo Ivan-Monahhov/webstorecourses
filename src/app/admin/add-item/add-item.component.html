@@ -1,4 +1,4 @@
-<form ngForm="addItemForm" (ngSubmit)="onSubmit(addItemForm)">
+<form #addItemForm = "ngForm" (ngSubmit)="onSubmit(addItemForm)">
   <label for="title">Title</label><br>
   <input type="text" id = title placeholder="Enter product name" ngModel name="title"><br>
   <label for="price">Price</label><br>
