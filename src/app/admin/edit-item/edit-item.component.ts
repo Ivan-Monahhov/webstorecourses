@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {FormControl, FormGroup, NgForm} from '@angular/forms';
+import {FormControl, FormGroup, NgForm, Validators} from '@angular/forms';
 import {ActivatedRoute, Router} from '@angular/router';
 import {Item} from '../../models/item.model';
 import {ItemService} from '../../services/item.service';
@@ -20,7 +20,7 @@ export class EditItemComponent implements OnInit {
     this.item = this.itemService.items[this.id];
     this.editItemForm = new FormGroup(
       {
-        title: new FormControl(this.item.title),
+        title: new FormControl(this.item.title , Validators.required),
         price: new FormControl(this.item.price),
         imgSrc: new FormControl(this.item.imgSrc),
         category: new FormControl(this.item.category)
