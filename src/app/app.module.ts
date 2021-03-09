@@ -11,7 +11,7 @@ import { EditItemComponent } from './admin/edit-item/edit-item.component';
 import { AddItemComponent } from './admin/add-item/add-item.component';
 import { ViewItemsComponent } from './admin/view-items/view-items.component';
 import { AdminHomeComponent } from './admin/admin-home/admin-home.component';
-import {FormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -28,7 +28,8 @@ import {FormsModule} from "@angular/forms";
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -14,7 +14,7 @@ const routes: Routes = [
   {path:"admin",component:AdminHomeComponent},
   {path:"admin/add-item",component:AddItemComponent},
   {path:"admin/view-items",component:ViewItemsComponent},
-  {path:"admin/edit-item",component:EditItemComponent},
+  {path:"admin/edit-item/:itemId",component:EditItemComponent},
   {path:"**", redirectTo:"/"}
 ];
 

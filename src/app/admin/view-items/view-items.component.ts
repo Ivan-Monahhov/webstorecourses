@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {ItemService} from "../../services/item.service";
 import {Item} from "../../models/item.model";
+import {ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'app-view-items',
@@ -9,13 +10,17 @@ import {Item} from "../../models/item.model";
 })
 export class ViewItemsComponent implements OnInit {
 
-  items: Item[] = []
+  items: Item[] = [];
 
   constructor(private itemService:ItemService) {
     this.items = itemService.items;
   }
 
   ngOnInit(): void {
+  }
+
+  delete(index: number){
+    this.itemService.items.splice(index,1);
   }
 
 }

@@ -1,8 +1,9 @@
 <div routerLink="/admin">Back</div>
 
-<div *ngFor="let item of items">
+<div *ngFor="let item of items; let i = index">
   <p>{{item.title}}</p>
   <p>{{item.category}}</p>
   <p>{{item.price}}</p>
-  <div routerLink="edit-item">Edit item</div>
+  <button (click)="delete(i)">Delete</button>
+  <div routerLink="['edit-item',i]">Edit item</div>
 </div>

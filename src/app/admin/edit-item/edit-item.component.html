@@ -1,1 +1,11 @@
-<div routerLink="/admin">Back</div>
+<form (ngSubmit)="onSubmit(editItemForm)" formGroup="editItemForm">
+  <span for="title">Title</span><br>
+  <input type="text" id = title placeholder="Enter product name" formControlName="title" required><br>
+  <label for="price">Price</label><br>
+  <input type="number" id = price placeholder="Enter product price" formControlName="price" required><br>
+  <label for="picture">Picture</label><br>
+  <input type="text" id = picture placeholder="Enter product pic" formControlName="picture"><br>
+  <label for="category">Category</label><br>
+  <input type="text" id = category placeholder="Category" formControlName="category" required><br>
+  <button type="submit" [disabled] = 'editItemForm.invalid'>Add</button>
+</form>
